@@ -1,8 +1,8 @@
 # Snyk Application Security Hands-On Workshop
 
-The following workshop is designed to to show how Snyk integrates into SCM systems like GitHub and performs various application security scans and what fix/remediation advice is given to secure you applications during the SDLC. 
+The following workshop is designed to show how Snyk integrates into SCM systems like GitHub and performs various application security scans and what fix/remediation advice is given to secure you applications during the SDLC. 
 
-THis covers four of the Sny Products as listed below:
+This covers four of the Sny Products as listed below:
 
 * Snyk Open Source
 * Snyk Code
