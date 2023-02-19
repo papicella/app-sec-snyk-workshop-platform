@@ -4,10 +4,10 @@ The following workshop is designed to show how Snyk integrates into SCM systems 
 
 This covers four of the Snyk Products as listed below:
 
-* Snyk Open Source
-* Snyk Code
-* Snyk Container
-* Snyk IaC
+* [Snyk Open Source](https://snyk.io/product/open-source-security-management/)
+* [Snyk Code](https://snyk.io/product/snyk-code/)
+* [Snyk Container](https://snyk.io/product/container-vulnerability-management/)
+* [Snyk IaC](https://snyk.io/product/infrastructure-as-code-security/)
 
 ## Prerequisites
 
