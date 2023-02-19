@@ -30,10 +30,9 @@ In this workshop we will use the Snyk Platform to monitor and perform applicatio
 * [Step 6 - Perform Snyk Test Using Snyk Open Source](#step-6---perform-snyk-test-using-snyk-open-source)
 * [Step 7 - Perform a Snyk Test Using Snyk Code](#step-7---perform-a-snyk-test-using-snyk-code)
 * [Step 8 - Using Snyk VS Code IDE Plugin](#step-8---using-snyk-vs-code-ide-plugin)
-* Step 9 - Analyze Snyk IaC Scan Results
-* Step 10 - Perform Snyk Test Using Snyk IaC
-* Step 11 - Analyze Dockerfile Scan Results
-* Step 12 - Analyze a Container using Snyk Container Registry Scan
+* [Step 9 - Analyze Snyk IaC Scan Results](#step-9---analyze-snyk-iac-scan-results)
+* [Step 10 - Perform Snyk Test Using Snyk IaC](#step-10---perform-snyk-test-using-snyk-iac)
+* [Step 11 - Analyze Dockerfile Scan Results](#step-11---analyze-dockerfile-scan-results)
 
 # Workshop Steps
 
@@ -558,7 +557,7 @@ Snyk Container allows you to scan a Dockerfile as shown above as well as directl
 
 [Snyk Container Integrations](https://docs.snyk.io/scan-containers/snyk-container-integrations)
 
-## Step 12 - Analyze a Container using Snyk Container Registry Scan
+## Congratulations - Workshop Completed!!!
 
 Thanks for attending and completing this workshop
 
