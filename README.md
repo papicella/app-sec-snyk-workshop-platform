@@ -160,12 +160,12 @@ When using our Source Code Management integration such as our GitHub integration
 
 ## Step 6 - Perform Snyk Test Using Snyk Open Source
 
-In addition to the Snyk App UI we also have, snyk - CLI and build-time tool to find & fix known vulnerabilities in open-source dependencies. The CLI is what is used in DevOps pipelines to introduce Application Security Scans as part of that workflow to push applications into production.
+In addition to the Snyk App UI we also have the snyk CLI a build-time tool to find & fix known vulnerabilities in open-source dependencies. The CLI is what is used in DevOps pipelines to introduce Application Security Scans as part of that workflow to push applications into production.
 
 Install the relevant package manager before you use the Snyk CLI tool. In this case you will need maven installed to perform these steps
 
 ```bash
-mvn --version
+$ mvn --version
 Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
 Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
 Java version: 11.0.13, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.13.jdk/Contents/Home
@@ -221,7 +221,7 @@ Resolving deltas: 100% (60/60), done.
 ```bash
 $ cd snyk-boot-web
 ```
-* 
+
 * To have better control over your tests, you can pass the severity-threshold flag to the snyk test command with one of the supported options (low|medium|high|critical). With this flag, only vulnerabilities of provided level or higher will be reported. Let's set that to "**critical**" and run a test as shown below.
 
 ```bash
@@ -292,7 +292,7 @@ Notifications about newly disclosed issues related to these dependencies will be
 
 * Returning to the Snyk App UI will show our CLI "**snyk monitor**" result but this time we didn't use the GitHub integration instead the scan type is given as a CLI scan as we performed this from the CLI itself
 
-![alt tag](https://i.ibb.co/3r8WpKq/app-sec-snyk-workshop-4.png)
+![alt tag](https://i.ibb.co/5MSRxhQ/platform-workshop-6.png)
 
 * Finally, lets run a scan and output the results to HTML. You must have installed the [snyk-to-html](https://docs.snyk.io/products/snyk-code/cli-for-snyk-code/displaying-the-cli-results-in-an-html-format-using-the-snyk-to-html-feature/installing-the-snyk-to-html-tool) add on for this to work
 
