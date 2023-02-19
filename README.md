@@ -538,7 +538,24 @@ Snyk detects vulnerable base images by scanning your Dockerfile when importing a
 
 ![alt tag](https://i.ibb.co/BfwRHJ3/platform-workshop-10.png)
 
-* 
+* Here we will go ahead and fix our Dockerfile using the "Open a Fix PR" button as follows
+
+![alt tag](https://i.ibb.co/n0LhyFn/platform-workshop-11.png)
+
+* Click on "Open a Fix PR" on the resulting page as shown below
+
+![alt tag](https://i.ibb.co/bQLz6nq/platform-workshop-12.png)
+
+* A PR is then created as show below. "**Files Changed**" will show you what it's updating in the Dockerfile itself
+
+![alt tag](https://i.ibb.co/4sDBzyV/platform-workshop-13.png)
+
+* Return to the projects dashboard, and you will see a new scan has occurred automatically and now our Dockerfile shows much less issues than previously. Of course until we build a new container and add it to the registry the container itself will still have the old base image in place within the Container registry itself.
+
+![alt tag](https://i.ibb.co/HzNSSbF/platform-workshop-14.png)
+
+* eheheh
+
 
 
 ## Step 12 - Analyze a Container using Snyk Container Registry Scan
