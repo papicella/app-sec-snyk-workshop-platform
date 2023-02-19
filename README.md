@@ -2,7 +2,7 @@
 
 The following workshop is designed to show how Snyk integrates into SCM systems like GitHub and performs various application security scans and what fix/remediation advice is given to secure you applications during the SDLC. 
 
-This covers four of the Sny Products as listed below:
+This covers four of the Snyk Products as listed below:
 
 * Snyk Open Source
 * Snyk Code
@@ -20,7 +20,7 @@ This covers four of the Sny Products as listed below:
 
 ## What we will do in this hands-on workshop?
 
-In this workshop we will use the Snyk Platform to monitor and perform application security scans across various different artifacts in the repository. This workshop will focus on Snyk Open Source and Snyk Code capability.
+In this workshop we will use the Snyk Platform to monitor and perform application security scans across various different artifacts in the repository. This workshop will focus on Snyk Open Source, Snyk Code, Snyk Container and Snyk IaC capability.
 
 * [Step 1 - Fork our sample repo into your own GitHub account](#step-1---fork-our-sample-repo-into-your-own-github-account)
 * [Step 2 - Configure GitHub Integration](#step-2---configure-github-integration)
@@ -53,7 +53,7 @@ _NOTE: You may have already setup GitHub integration in that case go ahead and s
 * Navigating to Integrations -> Source Control -> GitHub
 * Fill in your Account Credentials to Connect your GitHub Account.
 
-![alt tag](https://i.ibb.co/bPqqybM/snyk-starter-open-source-1.png)
+![alt tag](https://i.ibb.co/0qmpjYT/platform-workshop-2.png)
 
 Now that Snyk is connected to your GitHub Account, import the Repo into Snyk as a Project.
 
@@ -67,7 +67,7 @@ Now that Snyk is connected to your GitHub Account, import the Repo into Snyk as 
 
 _Note: The import can take up to one minute so you can view the import log while it's running_
 
-![alt tag](https://i.ibb.co/ZMZBNjR/app-sec-snyk-workshop-3.png)
+![alt tag](https://i.ibb.co/0JK5jWD/platform-workshop-1.png)
 
 * Finally, ensure you have enabled Snyk Code under the Settings menu option as shown below, before moving onto the next step
 
