@@ -30,6 +30,10 @@ In this workshop we will use the Snyk Platform to monitor and perform applicatio
 * [Step 6 - Perform Snyk Test Using Snyk Open Source](#step-6---perform-snyk-test-using-snyk-open-source)
 * [Step 7 - Perform a Snyk Test Using Snyk Code](#step-7---perform-a-snyk-test-using-snyk-code)
 * [Step 8 - Using Snyk VS Code IDE Plugin](#step-8---using-snyk-vs-code-ide-plugin)
+* Step 9 - Analyze Snyk IaC Scan Results
+* Step 10 - Perform Snyk Test Using Snyk IaC
+* Step 11 - Analyze Dockerfile Scan Results
+* Step 12 - Analyze a Container using Snyk Container Registry Scan
 
 # Workshop Steps
 
@@ -361,6 +365,32 @@ _VS Code_
 _IntelliJ IDEA_
 
 ![alt tag](https://i.ibb.co/ZY3Fr89/app-sec-snyk-workshop-20.png)
+
+## Step 9 - Analyze Snyk IaC Scan Results
+
+Snyk Infrastructure as Code allows you to find and fix vulnerabilities in your Kubernetes, Helm, Terraform, CloudFormation and Arm Templates configuration files
+
+* Return to the projects page and you will see various type of IaC scans from our already imported repo "**snyk-boot-web**". Go ahead and click on the terraform file as shown below to view it's scan results.
+
+![alt tag](https://i.ibb.co/Pg37Yz1/platform-workshop-7.png)
+
+For each Vulnerability, Snyk displays the following ordered by Highest Severity:
+
+1. Each Vulnerability grouped by line no and severity
+2. Each Vulnerability links to the Snyk policy it was defined against including the path to the issue, what the issue is, the impact and how to resolve it
+3. The ability to ignore issues you wish to remove from the list
+
+![alt tag](https://i.ibb.co/Z88GTDH/platform-workshop-8.png)
+
+![alt tag](https://i.ibb.co/rxtNMjR/platform-workshop-9.png)
+
+Note: We will resolve some of these issues shortly for now just browse through some of them to get familiar with what was raised and why including clicking on the Snyk Policy links
+
+## Step 10 - Perform Snyk Test Using Snyk IaC
+
+## Step 11 - Analyze Dockerfile Scan Results
+
+## Step 12 - Analyze a Container using Snyk Container Registry Scan
 
 Thanks for attending and completing this workshop
 
