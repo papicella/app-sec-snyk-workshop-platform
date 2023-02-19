@@ -71,17 +71,17 @@ _Note: The import can take up to one minute so you can view the import log while
 
 * Finally, ensure you have enabled Snyk Code under the Settings menu option as shown below, before moving onto the next step
 
-![alt tag](https://i.ibb.co/2hpm4RF/app-sec-snyk-workshop-21.png)
+![alt tag](https://i.ibb.co/Nn540GL/platform-workshop-3.png)
 
 The scan should not take longer then a few minutes once complete more onto the next step below
 
 ## Step 3 - Analyze Snyk Open Source Scan Results
 
-Now we have imported our **snyk-boot-web** repo into Snyk let's take a look at the scan results for our maven manifest pom.xml file where our open source dependencies are declared. 
+Now we have imported our **snyk-boot-web** repo into Snyk let's take a look at the scan results for our maven manifest pom.xml file where our open source dependencies are declared.
 
 * Click on the pom.xml as shown below
 
-![alt tag](https://i.ibb.co/KVdgMgd/app-sec-snyk-workshop-6.png)
+![alt tag](https://i.ibb.co/wM1Bnm3/platform-workshop-4.png)
 
 Let's have a look at the vulnerabilities.
 
