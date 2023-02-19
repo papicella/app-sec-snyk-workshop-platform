@@ -186,8 +186,9 @@ _Note: Make sure you have the following version installed or later_
 
 ```bash
 $ snyk --version
-1.1025.0
+1.1105.0
 ```
+
 * Authorize the snyk CLI with your account as follows
 
 ```bash
@@ -387,6 +388,104 @@ For each Vulnerability, Snyk displays the following ordered by Highest Severity:
 Note: We will resolve some of these issues shortly for now just browse through some of them to get familiar with what was raised and why including clicking on the Snyk Policy links
 
 ## Step 10 - Perform Snyk Test Using Snyk IaC
+
+* At this point let's go ahead and test "**main.tf**" to do that issue a command as shown below. In this example we are testing that file itself by specifically referring to it in the command.
+
+```bash
+$ snyk iac test ./terraform/main.tf
+
+Snyk Infrastructure as Code
+
+Using custom rules to generate misconfigurations.
+
+✔ Test completed.
+
+Issues
+
+Low Severity Issues: 3
+
+  [Low] S3 bucket versioning disabled
+  Info:    S3 bucket versioning is disabled. Changes or deletion of objects will
+           not be reversible
+  Rule:    https://snyk.io/security-rules/SNYK-CC-TF-124
+  Path:    resource > aws_s3_bucket[s3_bucket_myapp] > versioning > enabled
+  File:    ./terraform/main.tf
+  Resolve: For AWS provider < v4.0.0, set `versioning.enabled` attribute to
+           `true`. For AWS provider >= v4.0.0, add aws_s3_bucket_versioning
+           resource.
+
+  [Low] S3 bucket MFA delete control disabled
+  Info:    S3 bucket will not enforce MFA login on delete requests. Object could
+           be deleted without stronger MFA authorization
+  Rule:    https://snyk.io/security-rules/SNYK-CC-TF-127
+  Path:    resource > aws_s3_bucket[s3_bucket_myapp] > versioning > mfa_delete
+  File:    ./terraform/main.tf
+  Resolve: Follow instructions in `https://docs.aws.amazon.com/AmazonS3/latest/u
+           serguide/MultiFactorAuthenticationDelete.html` to manually configure
+           the MFA setting. For AWS provider < v4.0.0 set
+           `versioning.mfa_delete` attribute to `true` in aws_s3_bucket
+           resource. For AWS provider >= v4.0.0 set
+           'versioning_configuration.mfa_delete` attribute to `Enabled`. The
+           terraform change is required to reflect the setting in the state file
+
+  [Low] S3 server access logging is disabled
+  Info:    The s3 access logs will not be collected. There will be no audit
+           trail of access to s3 objects
+  Rule:    https://snyk.io/security-rules/SNYK-CC-TF-45
+  Path:    input > resource > aws_s3_bucket[s3_bucket_myapp] > logging
+  File:    ./terraform/main.tf
+  Resolve: For AWS provider < v4.0.0, add `logging` block attribute. For AWS
+           provider >= v4.0.0, add aws_s3_bucket_logging resource.
+
+Medium Severity Issues: 2
+
+  [Medium] Missing an owner from tag
+  Rule:    custom rule MY_RULE_1
+  Path:    input > resource > aws_s3_bucket[s3_bucket_myapp] > tags
+  File:    ./terraform/main.tf
+
+  [Medium] Non-encrypted S3 Bucket
+  Info:    Non-encrypted S3 Bucket. A non-encrypted S3 bucket increases the
+           likelihood of unintentional data exposure
+  Rule:    https://snyk.io/security-rules/SNYK-CC-TF-4
+  Path:    input > resource > aws_s3_bucket[s3_bucket_myapp]
+  File:    ./terraform/main.tf
+  Resolve: For AWS provider < v4.0.0, set `server_side_encryption_configuration`
+           block attribute. For AWS provider >= v4.0.0 add
+           aws_s3_bucket_server_side_encryption_configuration resource.
+
+High Severity Issues: 1
+
+  [High] S3 block public ACLs control is disabled
+  Info:    Bucket does not prevent creation of public ACLs. Anyone who can
+           manage bucket's ACLs will be able to grant public access to the
+           bucket
+  Rule:    https://snyk.io/security-rules/SNYK-CC-TF-95
+  Path:    resource > aws_s3_bucket[s3_bucket_myapp]
+  File:    ./terraform/main.tf
+  Resolve: Set the `aws_s3_bucket_public_access_block` `block_public_acls` field
+           to true.
+
+-------------------------------------------------------
+
+Test Summary
+
+  Organization: pas.apicella-41p
+  Project name: papicella/snyk-boot-web
+
+✔ Files without issues: 0
+✗ Files with issues: 1
+  Ignored issues: 0
+  Total issues: 6 [ 0 critical, 1 high, 2 medium, 3 low ]
+
+-------------------------------------------------------
+
+Tip
+
+  New: Share your test results in the Snyk Web UI with the option --report
+```
+
+* Go ahead and fix any of these issues using the provided remediation, you acn go back to Snyk App UI should you find the remediation advice on the UI easier to read
 
 ## Step 11 - Analyze Dockerfile Scan Results
 
