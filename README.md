@@ -554,9 +554,9 @@ Snyk detects vulnerable base images by scanning your Dockerfile when importing a
 
 ![alt tag](https://i.ibb.co/HzNSSbF/platform-workshop-14.png)
 
-* eheheh
+Snyk Container allows you to scan a Dockerfile as shown above as well as directly into a Container registry or through Snyk's Kubernetes Integration as well as using the Snyk CLI which is described here.
 
-
+[Snyk Container Integrations](https://docs.snyk.io/scan-containers/snyk-container-integrations)
 
 ## Step 12 - Analyze a Container using Snyk Container Registry Scan
 
