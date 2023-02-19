@@ -102,7 +102,7 @@ For each Vulnerability, Snyk displays the following ordered by our [Proprietary 
 * Now let's return to the projects view page
 * Click on "**Code Analysis**" to view our SAST scan results as shown below
 
-![alt tag](https://i.ibb.co/pnw8JN2/app-sec-snyk-workshop-8.png)
+![alt tag](https://i.ibb.co/Fw6LR5q/platform-workshop-5.png)
 
 For each Vulnerability, Snyk displays the following:
 
