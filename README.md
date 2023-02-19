@@ -486,8 +486,60 @@ Tip
 ```
 
 * Go ahead and fix any of these issues using the provided remediation, you acn go back to Snyk App UI should you find the remediation advice on the UI easier to read
+* Finally like all Snyk CLI scans you can set a severity threshold to indicate when we would like to break a build within a CI/CD pipeline as shown below
+
+```bash
+$ snyk iac test ./terraform/main.tf --severity-threshold=high
+
+Snyk Infrastructure as Code
+
+Using custom rules to generate misconfigurations.
+
+✔ Test completed.
+
+Issues
+
+High Severity Issues: 1
+
+  [High] S3 block public ACLs control is disabled
+  Info:    Bucket does not prevent creation of public ACLs. Anyone who can
+           manage bucket's ACLs will be able to grant public access to the
+           bucket
+  Rule:    https://snyk.io/security-rules/SNYK-CC-TF-95
+  Path:    resource > aws_s3_bucket[s3_bucket_myapp]
+  File:    ./terraform/main.tf
+  Resolve: Set the `aws_s3_bucket_public_access_block` `block_public_acls` field
+           to true.
+
+-------------------------------------------------------
+
+Test Summary
+
+  Organization: pas.apicella-41p
+  Project name: papicella/snyk-boot-web
+
+✔ Files without issues: 0
+✗ Files with issues: 1
+  Ignored issues: 0
+  Total issues: 1 [ 0 critical, 1 high, 0 medium, 0 low ]
+
+-------------------------------------------------------
+
+Tip
+
+  New: Share your test results in the Snyk Web UI with the option --report
+```
 
 ## Step 11 - Analyze Dockerfile Scan Results
+
+Snyk detects vulnerable base images by scanning your Dockerfile when importing a Git repository. This allows you to examine security issues before building the image, so helps solve potential problems before they land in your registry or in production.
+
+* Go ahead and return to the Projects page and this time click on the Dockerfile scan result as shown below
+
+![alt tag](https://i.ibb.co/BfwRHJ3/platform-workshop-10.png)
+
+* 
+
 
 ## Step 12 - Analyze a Container using Snyk Container Registry Scan
 
